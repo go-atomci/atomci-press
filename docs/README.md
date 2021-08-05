@@ -1,15 +1,19 @@
 ---
 home: true
 heroImage: /home.png
-title: a
+title: AtomCI 致力于让中小企业快速落地Kubernetes
 actionText: 快速上手 →
-actionLink: /guide/
+actionLink: /install/
 features:
-  - title: 简单快捷
-    details: 基于Gin的权限管理系统 易读易懂、界面简洁美观,提供前端Vue、后端Gin完全分离的权限管理系统,5分钟既可以实现一个应用
-  - title: 流水线自定义
-    details: 使用 gin/vue/react 等技术开发 合理的框架选择，良好的工程实践助你持续产出高质量代码 基于Casbin的 RBAC 访问控制模型
+  - title: 高并发的流水线
+    details: 系统经过简单配置，即可自动生成高并发流水线，高效执行构建、部署、测试、环境流转等任务。这一设计解决了微服务架构下带来的多服务交付效率低下的问题
+  - title: 云原生的CICD
+    details: 以应用为中心，使用云原生的yaml编排，轻松实现应用服务的CICD.
+  - title: 环境灵活配置
+    details: 一个开发环境不够用？ 可以根据需要灵活添加或删除环境
   - title: 服务集成
-    details: 在线配置表信息生成对应的代码，增删改查/排序/导出/权限控制等直接使用
+    details: 不论是阿里云/腾讯云，还是自建k8s,均可以轻松集成
+  - title: 权限管理
+  - title: 审计日志
 footer: MIT Licensed | Copyright © 2021-present colynn
 ---

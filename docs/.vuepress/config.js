@@ -9,7 +9,7 @@ module.exports = {
     lineNumbers: true
   },
   title: 'AtomCI',
-  description: 'A magical vue admin',
+  description: 'AtomCI - 致力于让中小企业快速落地Kubernetes,  cloudtinve/devops/cicd',
   base: '/atomci-press/',
   head: [
     [
@@ -99,7 +99,7 @@ module.exports = {
   locales: {
     '/': {
       lang: 'zh-CN',
-      description: 'AtomCI'
+      description: 'AtomCI 致力于让中小企业快速落地Kubernetes'
     }
   },
   configureWebpack: {
