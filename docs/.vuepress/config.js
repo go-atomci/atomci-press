@@ -18,7 +18,7 @@ module.exports = {
         rel: 'icon',
         href: '/favicon.ico'
       }
-    ],
+    ]
     // [
     //   'script',
     //   {},
@@ -27,7 +27,7 @@ module.exports = {
     // (function() {
     //   var hm = document.createElement("script");
     //   hm.src = "https://hm.baidu.com/hm.js?f98a2f382011d17906899de9f676b294";
-    //   var s = document.getElementsByTagName("script")[0]; 
+    //   var s = document.getElementsByTagName("script")[0];
     //   s.parentNode.insertBefore(hm, s);
     // })();
     //     `
@@ -61,18 +61,22 @@ module.exports = {
           {
             text: '支持',
             items: [
-              { text: '技术交流', link: '/support/'},
-              { text: '常见问题', link: '/support/faq.html'}
+              { text: '技术交流', link: '/support/' },
+              { text: '常见问题', link: '/support/faq.html' }
             ]
-          },
+          }
         ],
         sidebar: {
           '/install/': [
             {
               title: '安装',
               collapsable: false,
-              children: ['/install/']
-            },
+              children: [
+                '/install/',
+                '/install/01binary',
+                '/install/02docker-compose'
+              ]
+            }
           ],
           '/guide/': [
             {
@@ -85,20 +89,18 @@ module.exports = {
             {
               title: '支持',
               collapsable: false,
-              children: [
-                '/support/'
-              ]
+              children: ['/support/']
             }
           ]
         }
-      },
+      }
     }
   },
   locales: {
     '/': {
       lang: 'zh-CN',
       description: 'AtomCI'
-    },
+    }
   },
   configureWebpack: {
     resolve: {
@@ -106,16 +108,12 @@ module.exports = {
         '@public': './public'
       }
     }
-  },
+  }
   // ga: 'UA-109340118-1'
 }
 
 function genEssentialsSidebar(type = '') {
-  const mapArr = [
-    '/guide/',
-    '/guide/00features.md',
-    '/guide/01quickstart.md'
-  ]
+  const mapArr = ['/guide/', '/guide/00features.md', '/guide/01quickstart.md']
   return mapArr.map(i => {
     return type + i
   })
