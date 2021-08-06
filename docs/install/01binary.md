@@ -120,8 +120,8 @@ url = http://localhost:8080
 
 
 [defaultImages]
-jnlpImageAddr = 10.151.3.75:5000/library/jenkins:jnlp-debug
-kanikoImageAddr = 10.151.3.75:5000/library/kaniko-executor:latest
+jnlpImageAddr = 10.10.2.60:5000/library/jenkins:jnlp-debug
+kanikoImageAddr = 10.10.2.60:5000/library/kaniko-executor:latest
 
 [log]
 logfile = "log/atomci.log"
