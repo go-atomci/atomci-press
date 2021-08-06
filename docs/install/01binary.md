@@ -13,7 +13,11 @@
 ### 1.下载二进制文件
 
 ```bash
-$ wget
+# amd64
+$ wget https://github.com/go-atomci/atomci-press/releases/download/1.0.0/atomci-linux-amd64
+
+# arm64
+$ https://github.com/go-atomci/atomci-press/releases/download/1.0.0/atomci-linux-arm64
 ```
 
 ### 2.应用配置
@@ -27,16 +31,46 @@ $ wget
 2. 前端 nginx 配置
 
 ```conf
+server {
+  listen 80;
+  server_name _;
+  charset utf-8;
 
+  # files transfer
+  client_body_in_file_only clean;
+  client_body_buffer_size 32K;
+  client_max_body_size 1026g;
+  sendfile on;
+  send_timeout 300s;
+
+  # redirect server error pages / and set response status to 200 / ok
+  error_page 404 =200 /;
+
+  root /usr/share/nginx/html;
+  index index.html index.html;
+
+  location / {
+    try_files $uri $uri/ /index.html =404;
+  }
+
+  location /atomci {
+      proxy_pass http://1.1.1.1:8080;
+      proxy_redirect off;
+  }
+
+  # deny access to .htaccess files, if Apache's document root concurs with nginx's one
+  location ~ /\.ht {
+    deny all;
+  }
+
+  # deny access to hidden files (beginning with a period)
+  location ~ /\. {
+      access_log off; log_not_found off; deny all;
+  }
+}
 ```
 
-### 3.应用初始化
-
-```bash
-$ ./cli init --token=[token-get-from-sysuser-table]
-```
-
-### 4.应用启动
+### 3.应用启动
 
 ```bash
 # 仅启动服务端
@@ -45,9 +79,18 @@ $ ./atomci
 
 > 前端是以静态文件依托于`nginx`服务来呈现的，所以直接启动`nginx`即可启动前端服务.
 
+
+### 4.应用初始化
+
+```bash
+$ wget https://github.com/go-atomci/atomci-press/releases/download/1.0.0/cli
+$ ./cli init --token=[token-get-from-sysuser-table]
+```
+> 仅需要执行一次即可，注意在启动 `atomci`应用服务之后，执行初始化.
+
 ### 5.应用访问
 
-> 根据提示访问 AtomCI 系统验证安装结果
+> 根据提示访问 AtomCI 系统验证安装结果, 默认用户名密码: `admin`/`123456`
 
 ## 附录
 
