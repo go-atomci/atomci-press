@@ -14,10 +14,10 @@
 
 ```bash
 # amd64
-$ wget https://github.com/go-atomci/atomci-press/releases/download/1.0.0/atomci-linux-amd64
+$ wget https://github.com/go-atomci/atomci-press/releases/download/1.0.0/atomci-linux_amd64.tgz
 
 # arm64
-$ https://github.com/go-atomci/atomci-press/releases/download/1.0.0/atomci-linux-arm64
+$ wget https://github.com/go-atomci/atomci-press/releases/download/1.0.0/atomci-linux_amd64.tgz
 ```
 
 ### 2.应用配置
@@ -79,13 +79,13 @@ $ ./atomci
 
 > 前端是以静态文件依托于`nginx`服务来呈现的，所以直接启动`nginx`即可启动前端服务.
 
-
 ### 4.应用初始化
 
 ```bash
 $ wget https://github.com/go-atomci/atomci-press/releases/download/1.0.0/cli
 $ ./cli init --token=[token-get-from-sysuser-table]
 ```
+
 > 仅需要执行一次即可，注意在启动 `atomci`应用服务之后，执行初始化.
 
 ### 5.应用访问
