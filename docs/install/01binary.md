@@ -98,7 +98,7 @@ $ ./cli init --token=[token-get-from-sysuser-table]
 
 ```conf
 [default]
-appname = publishctl
+appname = atomci
 httpport = 8080
 runmode = dev
 copyrequestbody = true
