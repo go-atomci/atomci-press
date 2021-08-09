@@ -1,4 +1,4 @@
-# 二进制安装
+# 二进制部署
 
 ## 前置条件
 
@@ -44,6 +44,11 @@ $ tar -zxvf  atomci-linux_amd64.tgz
    - 修改`[jwt]`的配置，将 `secret` 改为自定义的随机字符串，保证系统的安全性
    - 修改`[atomci]`的配置， 将`url`改为部署主机的 IP 及端口信息
 
+```sh
+# 拷贝应用的示例配置文件
+$ cp conf/app.conf.sample  conf/app.conf
+```
+
 2. 前端 nginx 配置及启动
 
 ::: tip
@@ -55,19 +60,24 @@ $ tar -zxvf  atomci-linux_amd64.tgz
 
 ```sh
 $ tar -zxvf dist.tgz -C  /usr/share/nginx/html
+
+# 拷贝应用的nginx配置文件
 $ cp atomci-nginx.conf   /etc/nginx/conf.d/
-$ nginx -t
-$ nginx
+
 ```
 
 ### 4.应用启动
 
 ```bash
+# 检查nginx语法
+$ nginx -t
+
+# 重启nginx，使新增的前端配置生效
+$ nginx -s reload
+
 # 仅启动服务端
 $ ./atomci
 ```
-
-> 前端是以静态文件依托于`nginx`服务来呈现的，所以直接启动`nginx`即可启动前端服务.
 
 ### 5.应用初始化
 
@@ -87,6 +97,7 @@ $ ./cli init --token=[token-get-from-sysuser-table]
 ### 应用示例配置及参数说明
 
 ```conf
+# app default setting
 [default]
 appname = atomci
 httpport = 8080
@@ -94,6 +105,7 @@ runmode = dev
 copyrequestbody = true
 
 
+# db settings
 [DB]
 url = root:root@tcp(127.0.0.1:3306)/atomci?charset=utf8mb4
 debug = false
@@ -101,14 +113,16 @@ rowsLimit = 5000
 maxIdelConns = 100
 maxOpenConns = 200
 
+# jwt secret 
 [jwt]
 secret = changeme
 
 # build/deploy callback
 [atomci]
-url = http://localhost:8080
+url = http://localhost:8081
 
 
+# jenkins default jnlp/ kaniko image defined.
 [defaultImages]
 jnlpImageAddr = 10.10.2.60:5000/library/jenkins:jnlp-debug
 kanikoImageAddr = 10.10.2.60:5000/library/kaniko-executor:latest
@@ -122,6 +136,7 @@ separate = ["error"]
 [k8s]
 configPath = ./conf/k8sconfig
 
+# ldap settings
 [ldap]
 host = ldap.xxx.com
 port = 389
