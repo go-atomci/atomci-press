@@ -1,14 +1,12 @@
-# docker-compose部署
+# docker-compose 部署
 
 ## 前置条件
 
 - 请准备一台 linux 环境，2cx4Gx50G;
 - docker `v18.06+`
-- dokcer-compose
 - jenkins `v2.0+`
 - harbor `v1.6.0+`
 - kubernetes `v1.12.0+`
-
 
 ## 安装流程
 
@@ -16,6 +14,12 @@
 
 ```bash
 $ wget https://github.com/go-atomci/atomci-press/releases/download/1.0.0/atomci-1.0.0-docker-compose.tgz
+```
+
+```sh
+# 安装docker-compose
+$ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 ### 2. 安装包目录结构
@@ -28,3 +32,26 @@ $ wget https://github.com/go-atomci/atomci-press/releases/download/1.0.0/atomci-
  |__ docker-compose.yml  # docker-compose启动文件
 ```
 
+### 3. 应用启动
+
+```sh
+## 启动mysql
+$ docker-compose up -d mysql
+
+## 确认 mysql 服务状态
+$ docker-compose logs mysql |grep -q "poxxrt: 3306  MySQL Community Server (GPL)"   && echo "mysql is up"  || echo "mysql is down, please restart it, use: docker-compose restart mysql"
+
+## 启动服务端
+$ docker-compose up -d atomci
+
+## 启动前端
+$ docker-compose up -d frontend
+```
+
+### 4. 应用初始化
+
+```
+$
+```
+
+### 5. 应用访问
