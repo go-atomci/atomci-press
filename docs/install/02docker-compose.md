@@ -29,6 +29,7 @@ $ sudo chmod +x /usr/local/bin/docker-compose
  |__ conf           # 后端的示例配置文件
  |__ nginx          # 前端nginx示例配置文件
  |__ mysql          # mysql
+ |__ init.sh        # 部署初始化脚本
  |__ docker-compose.yml  # docker-compose启动文件
 ```
 
@@ -36,10 +37,7 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 
 ```sh
 ## 启动mysql
-$ docker-compose up -d mysql
-
-## 确认 mysql 服务状态
-$ docker-compose logs mysql |grep -q "poxxrt: 3306  MySQL Community Server (GPL)"   && echo "mysql is up"  || echo "mysql is down, please restart it, use: docker-compose restart mysql"
+$ docker-compose up -d
 
 ## 启动服务端
 $ docker-compose up -d atomci
@@ -51,7 +49,27 @@ $ docker-compose up -d frontend
 ### 4. 应用初始化
 
 ```
-$
+$ bash init.sh
 ```
 
 ### 5. 应用访问
+
+::: tip
+
+默认会侦听8090端口，可以通过 http://localhost:8090 或是 http://[local-ip]:8090 来开启atomci的旅程
+:::
+
+
+##　附录
+
+### 卸载应用
+```sh
+# 停止服务
+$ docker-compose stop
+
+# 删除服务容器
+$ docker-compose rm -f
+
+# 清除数据目录
+$ rm -f mysql/data
+```
