@@ -9,4 +9,4 @@ AtomCI 目前支持 2 种部署方式：
 | 安装方式                                               | 说明                             | 适用场景   |
 | ------------------------------------------------------ | -------------------------------- | ---------- |
 | [`二进制部署`](/install/01binary.html)                 | 在单台物理机或云主机或虚拟机安装 | 可生产使用 |
-| [`docker-compose部署`](/install/02docker-compose.html) | 在现有 docker 环境上安装         | 可生产使用 |
+| [`docker-compose部署`(推荐)](/install/02docker-compose.html) | 在现有 docker 环境上安装         | 可生产使用 |
