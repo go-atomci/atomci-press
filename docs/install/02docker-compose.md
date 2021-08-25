@@ -36,14 +36,8 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 ### 3. 应用启动
 
 ```sh
-## 启动mysql
+## 启动所有容器
 $ docker-compose up -d
-
-## 启动服务端
-$ docker-compose up -d atomci
-
-## 启动前端
-$ docker-compose up -d frontend
 ```
 
 ### 4. 应用初始化
@@ -52,15 +46,20 @@ $ docker-compose up -d frontend
 $ bash init.sh
 ```
 
-### 5. 应用访问
+
+### 5. 确认服务状态/应用访问
+
+```sh
+$ docker-compose ps
+```
 
 ::: tip
 
-默认会侦听8090端口，可以通过 http://localhost:8090 或是 http://[local-ip]:8090 来开启atomci的旅程
+默认会侦听`8090`端口，可以通过 `http://localhost:8090` 或是 `http://[local-ip]:8090` 来开启 __atomci__ 的旅程(:
 :::
 
 
-##　附录
+## 附录
 ### 卸载应用
 ```sh
 # 停止服务
