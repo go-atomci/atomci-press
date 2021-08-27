@@ -55,7 +55,9 @@ $ docker-compose ps
 
 ::: tip
 
-默认会侦听`8090`端口，可以通过 `http://localhost:8090` 或是 `http://[local-ip]:8090` 来开启 __atomci__ 的旅程(:
+默认会侦听`8090`端口，可以通过 `http://[deploy-ip-addr]:8090` 来开启 __atomci__ 的旅程(:
+
+默认用户名及密码: `admin` / `123456`
 :::
 
 
