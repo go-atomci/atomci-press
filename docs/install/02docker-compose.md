@@ -25,7 +25,7 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 ### 2. 安装包目录结构
 
 ```sh
----- atomci-1.0.1   #
+---- atomci-latest  #
  |__ conf           # 后端的示例配置文件
  |__ nginx          # 前端nginx示例配置文件
  |__ mysql          # mysql
