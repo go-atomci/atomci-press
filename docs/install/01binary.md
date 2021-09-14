@@ -101,7 +101,7 @@ $ ./cli init --token=[token-get-from-sysuser-table]
 [default]
 appname = atomci
 httpport = 8080
-runmode = dev
+runmode = prod
 copyrequestbody = true
 
 
