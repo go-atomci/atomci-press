@@ -62,6 +62,13 @@ $ docker-compose ps
 
 
 ## 附录
+
+## Jenkins agent容器化配置
+
+* [service account 验证信息说明](https://github.com/warm-native/docs/tree/master/topic002/deploy)
+
+* [如何配置 jenkins 与 k8s 集成，bilibili 视频链接](https://www.bilibili.com/video/BV1A5411V7zm/)
+
 ### 卸载应用
 ```sh
 # 停止服务
