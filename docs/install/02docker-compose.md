@@ -46,7 +46,6 @@ $ docker-compose up -d
 $ bash init.sh
 ```
 
-
 ### 5. 确认服务状态/应用访问
 
 ```sh
@@ -55,21 +54,25 @@ $ docker-compose ps
 
 ::: tip
 
-默认会侦听`8090`端口，可以通过 `http://[deploy-ip-addr]:8090` 来开启 __atomci__ 的旅程(:
+默认会侦听`8090`端口，可以通过 `http://[deploy-ip-addr]:8090` 来开启 **atomci** 的旅程(:
 
 默认用户名及密码: `admin` / `123456`
 :::
 
+## 下一步
+
+完成自定义环境配置，run **atomci** in real world. 参考[快速开始](https://go-atomci.github.io/atomci-press/guide/01quickstart.html)，
 
 ## 附录
 
-## Jenkins agent容器化配置
+## Jenkins agent 容器化配置
 
-* [service account 验证信息说明](https://github.com/warm-native/docs/tree/master/topic002/deploy)
+- [service account 验证信息说明](https://github.com/warm-native/docs/tree/master/topic002/deploy)
 
-* [如何配置 jenkins 与 k8s 集成，bilibili 视频链接](https://www.bilibili.com/video/BV1A5411V7zm/)
+- [如何配置 jenkins 与 k8s 集成，bilibili 视频链接](https://www.bilibili.com/video/BV1A5411V7zm/)
 
 ### 卸载应用
+
 ```sh
 # 停止服务
 $ docker-compose stop

@@ -9,7 +9,8 @@ module.exports = {
     lineNumbers: true
   },
   title: 'AtomCI',
-  description: 'AtomCI - 致力于让中小企业快速落地Kubernetes,  cloudtinve/devops/cicd',
+  description:
+    'AtomCI - 致力于让中小企业快速落地Kubernetes,  cloudtinve/devops/cicd',
   base: '/atomci-press/',
   head: [
     [
@@ -113,7 +114,7 @@ module.exports = {
 }
 
 function genEssentialsSidebar(type = '') {
-  const mapArr = ['/guide/', '/guide/00features.md', '/guide/01quickstart.md']
+  const mapArr = ['/guide/', '/guide/01quickstart.md', '/guide/00features.md']
   return mapArr.map(i => {
     return type + i
   })
