@@ -2,11 +2,13 @@
 
 ## 0.服务集成配置
 
+
 ::: tip
 
-Jenkins 的 kubernetes 的授权配置请查看 https://github.com/warm-native/docs/tree/master/topic002/deploy
+Jenkins 的 kubernetes 的授权配置请查看 [github](https://github.com/warm-native/docs/tree/master/topic002/deploy)
 
 :::
+
 
 ## 1.创建项目
 
