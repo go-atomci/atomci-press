@@ -61,7 +61,7 @@ $ docker-compose ps
 
 ## 下一步
 
-完成自定义环境配置，run **atomci** in real world. 参考[快速开始](https://go-atomci.github.io/atomci-press/guide/01quickstart.html)，
+完成自定义环境配置，run **atomci** in real world. 参考[快速开始](/guide/01quickstart.html)，
 
 ## 附录
 
