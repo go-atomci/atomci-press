@@ -8,7 +8,7 @@
 - harbor `v1.6.0+`
 - kubernetes `v1.12.0+`
 
-## 安装流程
+## 安装过程
 
 ### 1.下载安装包
 
@@ -58,6 +58,10 @@ $ docker-compose ps
 
 默认用户名及密码: `admin` / `123456`
 :::
+
+## 部署视频
+
+<iframe src="http://player.bilibili.com/player.html?aid=547966151&cid=316359860&page=1" scrolling="no" width="800px" height="600px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 ## 下一步
 
