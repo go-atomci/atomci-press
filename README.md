@@ -6,6 +6,7 @@ AtomCI 致力于让中小企业快速落地Kubernetes
 
 ## 视频演示
 1. 概述及如何安装部署 [视频链接](https://www.bilibili.com/video/BV1qq4y1N7mZ/)
+2. 介绍及快速开始 [视频链接](https://www.bilibili.com/video/BV1K3411m78Q/)
 
 ## 功能介绍
 [>请移步](https://go-atomci.github.io/atomci-press/guide/00features.html)
