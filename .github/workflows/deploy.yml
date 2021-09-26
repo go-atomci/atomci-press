@@ -19,7 +19,6 @@ jobs:
         with:
           node-version: '14'
       - run: |
-          pwd
           yarn install
           yarn run build
       - name: Pages Commit & Publish
@@ -28,7 +27,6 @@ jobs:
           touch .nojekyll
           git init
           git add -A
-          git config user.name 'colynn'
-          git config user.email  ${{secrets.GITHUB_EMAIL}}
+          git config user.name 'gitlab-ci-boot'
           git commit -m "publish site"
           git push -f https://colynn:${{secrets.GITHUB_TOKEN}}@github.com/go-atomci/atomci-press.git  master:gh-pages
