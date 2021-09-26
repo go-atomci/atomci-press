@@ -14,10 +14,21 @@ jobs:
         uses: actions/checkout@master
         with:
           submodules: true
-      - name: Publish Site
+      - name: Build page
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - run: pwd
-      - run: yarn install
-      - run: yarn run build
+      - run: |
+          pwd
+          yarn install
+          yarn run build
+      - name: Pages Commit & Publish
+        run: |
+          cd docs/.vuepress/dist
+          touch .nojekyll
+          git init
+          git add -A
+          git config user.name 'colynn'
+          git config user.email  ${{secrets.GITHUB_EMAIL}}
+          git commit -m "publish site"
+          git push -f https://colynn:${{secrets.GITHUB_TOKEN}}@github.com/go-atomci/atomci-press.git  master:gh-pages
