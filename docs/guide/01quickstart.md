@@ -12,12 +12,14 @@
 
 ### 新建-服务集成
 
+#### kubernetes 配置集成
 ![新建服务集成配置](../assets/guide/service-inter02.png)
 
 
+#### jenkins 配置集成
 ![新建服务集成配置](../assets/guide/service-inter03.png)
 
-
+#### harbor 配置集成
 ![新建服务集成配置](../assets/guide/service-inter04.png)
 
 
@@ -55,12 +57,15 @@
 ![创建项目](../assets/guide/project07.png)
 ## 3.应用代码配置
 
+#### 3.1 关联代码仓库
 ![创建项目](../assets/guide/project08.png)
 
+#### 3.2 同步代码源
 ![创建项目](../assets/guide/project09.png)
 
 ![创建项目](../assets/guide/project10.png)
 
+#### 3.3 应用编排配置
 ![创建项目](../assets/guide/project11.png)
 
 ![创建项目](../assets/guide/project12.png)
