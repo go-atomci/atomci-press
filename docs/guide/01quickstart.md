@@ -63,6 +63,13 @@
 
 ![创建项目](../assets/guide/project11.png)
 
+![创建项目](../assets/guide/project12.png)
 ## 4.创建流水线
 
+![创建项目](../assets/guide/project13.png)
+
+![创建项目](../assets/guide/project14.png)
+
 ## 5.应用服务
+
+![创建项目](../assets/guide/project15.png)
