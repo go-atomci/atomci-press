@@ -35,4 +35,4 @@ open http://localhost:8080
 ![Wechat](https://img.shields.io/badge/-colynnliu-%2307C160?style=flat&logo=Wechat&logoColor=white)
 
 ### AtomCI 用户交流群
-![创建项目](./docs/assets/support/atomci-group01.jpeg)
+![创建项目](./docs/assets/support/atomci-group01.png)
