@@ -34,5 +34,11 @@ open http://localhost:8080
 ### AtomCI开发者
 ![Wechat](https://img.shields.io/badge/-colynnliu-%2307C160?style=flat&logo=Wechat&logoColor=white)
 
+<a href="https://github.com/go-atomci/atomci-press/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=go-atomci/atomci-press" />
+</a>
+
+---
+
 ### AtomCI 用户交流群
 ![创建项目](./docs/assets/support/atomci-group01.png)
