@@ -11,23 +11,6 @@ AtomCI 致力于让中小企业快速落地Kubernetes
 ## 功能介绍
 [>请移步](https://go-atomci.github.io/atomci-press/guide/00features.html)
 
-## Development
-
-```bash
-# clone the project
-git clone git@github.com:go-atomci/atomci-press.git
-
-# install dependency
-yarn install
-
-# develop
-yarn run dev
-```
-
-open http://localhost:8080
-
-> Generator by [vuepress](https://github.com/vuejs/vuepress)
-
 
 ## 互动交流
 
@@ -39,6 +22,15 @@ open http://localhost:8080
 </a>
 
 ---
+
+### 已知问题
+
+__AtomCI__ 仍在不断完善中（[问题列表](https://github.com/go-atomci/atomci-press/issues)）， 如果你发现你想用的一些功能不能正常工作的话，烦请[创建issue](https://github.com/go-atomci/atomci-press/issues/new)，我们会及时标记、修复。 
+
+__AtomCI__ 因你而变。
+
+---
+
 
 ### AtomCI 用户交流群
 ![创建项目](./docs/assets/support/atomci-group01.png)
