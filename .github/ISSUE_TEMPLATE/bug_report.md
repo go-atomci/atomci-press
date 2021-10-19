@@ -8,7 +8,6 @@ assignees: ''
 ---
 
 * `应用版本`:
-     * `colynn/atomci-frontend`: 
-     * `colynn/atomci`:
-* `Kubernetes`: 
-*  `部署方式`:
+     * `atomci-frontend`: 
+     * `atomci`:
+* `Kubernetes`:
