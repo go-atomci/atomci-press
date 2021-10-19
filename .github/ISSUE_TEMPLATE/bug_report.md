@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: 如果遇到了bug, 麻烦告诉我们，AtomCI因你而变~
 title: ''
 labels: bug
 assignees: ''
