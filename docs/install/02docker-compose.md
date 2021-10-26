@@ -13,7 +13,7 @@
 ### 1.下载安装包
 
 ```bash
-$ wget https://github.com/go-atomci/atomci-press/releases/download/1.1.0/atomci-1.1.0-docker-compose.tgz
+$ wget https://github.com/go-atomci/atomci-press/releases/download/1.1.0/atomci-latest-docker-compose.tgz
 ```
 
 ```sh
