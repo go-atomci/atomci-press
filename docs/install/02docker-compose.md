@@ -4,10 +4,9 @@
 
 - 请准备一台 linux 环境，2cx4Gx50G;
 - docker `v18.06+`
-- jenkins `v2.0+`
+- jenkins `v2.0+` 请参看 [jenkins的配置](../guide/02.jenkins-requirements.html)
 - harbor `v1.6.0+`
 - kubernetes `v1.12.0+`
-
 ## 安装过程
 
 ### 1.下载安装包

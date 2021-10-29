@@ -114,7 +114,7 @@ module.exports = {
 }
 
 function genEssentialsSidebar(type = '') {
-  const mapArr = ['/guide/', '/guide/01quickstart.md', '/guide/00features.md']
+  const mapArr = ['/guide/', '/guide/01quickstart.md', '/guide/00features.md', '/guide/02.jenkins-requirements.md']
   return mapArr.map(i => {
     return type + i
   })
