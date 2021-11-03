@@ -44,11 +44,16 @@ $ tar -zxvf  atomci-linux_amd64.tgz
    - 修改`[jwt]`的配置，将 `secret` 改为自定义的随机字符串，保证系统的安全性
    - 修改`[atomci]`的配置， 将`url`改为部署主机的 IP 及端口信息
 
+
 ```sh
 # 拷贝应用的示例配置文件
 $ cp conf/app.conf.sample  conf/app.conf
 ```
 
+```sh
+# 创建数据库并指定字符集
+> CREATE DATABASE atomci CHARACTER SET utf8mb4;
+```
 2. 前端 nginx 配置及启动
 
 ::: tip
