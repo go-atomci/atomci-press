@@ -34,6 +34,13 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 
 ### 3. 应用启动
 
+::: tip
+
+启动容器前请将`atomci::url` 调整为`atomci`部署对应的主机的IP, 否则jenkins的回调会失败．
+
+:::
+
+
 ```sh
 ## 启动所有容器
 $ docker-compose up -d
