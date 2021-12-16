@@ -12,12 +12,12 @@
 ### 1.下载安装包
 
 ```bash
-$ wget https://github.com/go-atomci/atomci/releases/download/v1.29.2/atomci-latest-docker-compose.tgz
+$ wget https://github.com/go-atomci/atomci/releases/download/v1.3.0/atomci-latest-docker-compose.tgz
 ```
 
 ```sh
 # 安装docker-compose
-$ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+$ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 $ sudo chmod +x /usr/local/bin/docker-compose
 ```
 
