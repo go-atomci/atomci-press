@@ -36,7 +36,7 @@ module.exports = {
   ],
   themeConfig: {
     repo: 'go-atomci/atomci',
-    docsRepo: 'go-atomci/atomci',
+    docsRepo: 'go-atomci/atomci-press',
     lastUpdated: '上次更新',
     docsDir: 'docs',
     editLinks: true,
