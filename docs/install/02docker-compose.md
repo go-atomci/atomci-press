@@ -12,7 +12,7 @@
 ### 1.下载安装包
 
 ```bash
-$ wget https://gitee.com/goatom/atomci/attach_files/937610/download/atomci-latest-docker-compose.tgz
+$ wget https://gitee.com/goatom/atomci/attach_files/947178/download/atomci-latest-docker-compose.tgz
 ```
 
 ```sh
