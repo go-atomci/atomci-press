@@ -17,7 +17,7 @@
 $ wget https://github.com/go-atomci/atomci-press/releases/download/1.0.0/atomci-linux_amd64.tgz
 
 # arm64
-$ wget https://github.com/go-atomci/atomci-press/releases/download/1.0.0/atomci-linux_amd64.tgz
+$ wget https://github.com/go-atomci/atomci-press/releases/download/1.0.0/atomci-linux_arm64.tgz
 ```
 
 ### 2. 安装包目录结构
