@@ -12,7 +12,7 @@
 ### 1.下载安装包
 
 ```bash
-$ wget https://gitee.com/goatom/atomci/attach_files/947178/download/atomci-latest-docker-compose.tgz
+$ wget https://gitee.com/goatom/atomci/attach_files/1047912/download/atomci-latest-docker-compose.tgz
 ```
 
 ```sh
@@ -28,7 +28,7 @@ $ sudo chmod +x /usr/local/bin/docker-compose
  |__ conf           # 后端的示例配置文件
  |__ nginx          # 前端nginx示例配置文件
  |__ mysql          # mysql
- |__ init.sh        # 部署初始化脚本
+ |__ start.sh        # 部署启动脚本
  |__ docker-compose.yml  # docker-compose启动文件
 ```
 
@@ -42,17 +42,11 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 
 
 ```sh
-## 启动所有容器
-$ docker-compose up -d
+$ bash start.sh
 ```
 
-### 4. 应用初始化
 
-```
-$ bash init.sh
-```
-
-### 5. 确认服务状态/应用访问
+### 4. 确认服务状态/应用访问
 
 ```sh
 $ docker-compose ps
