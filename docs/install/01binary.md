@@ -14,20 +14,20 @@
 
 ```bash
 # amd64
-$ wget https://github.com/go-atomci/atomci-press/releases/download/1.0.0/atomci-linux_amd64.tgz
+$ wget https://github.com/go-atomci/atomci/releases/download/v1.5.0/atomci-linux_amd64.tgz
 
 # arm64
-$ wget https://github.com/go-atomci/atomci-press/releases/download/1.0.0/atomci-linux_arm64.tgz
+$ wget https://github.com/go-atomci/atomci/releases/download/v1.5.0/atomci-linux_arm64.tgz
 ```
 
 ### 2. 安装包目录结构
 
 ```sh
----- amd64   # arch
- |__ atomci             # 后端服务端程序
- |__ app.conf.sample    # 后端的示例配置文件
- |__ dist.tgz           # 前端静态文件
- |__ atomci-nginx.conf  # 前端nginx配置文件
+---- atomci-linux-amd64  # arch
+ |__ atomci              # 后端服务端程序
+ |__ app.conf.template   # 后端的示例配置文件
+ |__ dist.tgz            # 前端静态文件
+ |__ atomci-nginx.conf   # 前端nginx配置文件
 ```
 
 ### 3.应用配置
@@ -47,7 +47,7 @@ $ tar -zxvf  atomci-linux_amd64.tgz
 
 ```sh
 # 拷贝应用的示例配置文件
-$ cp conf/app.conf.sample  conf/app.conf
+$ cp conf/app.conf.template  conf/app.conf
 ```
 
 ```sh
@@ -84,69 +84,12 @@ $ nginx -s reload
 $ ./atomci
 ```
 
-### 5.应用初始化
 
-```bash
-$ wget https://github.com/go-atomci/atomci-press/releases/download/1.0.0/cli
-$ ./cli init --token=[token-get-from-sysuser-table]
-```
-
-> 仅需要执行一次即可，注意在启动 `atomci`应用服务之后，执行初始化.
-
-### 6.应用访问
+### 5.应用访问
 
 > 根据提示访问 AtomCI 系统 `http://ip:8081` 验证安装结果, 默认用户名密码: `admin`/`123456`
 
 ## 附录
 
-### 应用示例配置及参数说明
+* [应用示例配置及参数说明](https://github.com/go-atomci/atomci/tree/master#%E9%99%84%E5%BD%95)
 
-```conf
-# app default setting
-[default]
-appname = atomci
-httpport = 8080
-runmode = prod
-copyrequestbody = true
-
-
-# db settings
-[DB]
-url = root:root@tcp(127.0.0.1:3306)/atomci?charset=utf8mb4
-debug = false
-rowsLimit = 5000
-maxIdelConns = 100
-maxOpenConns = 200
-
-# jwt secret 
-[jwt]
-secret = changeme
-
-# build/deploy callback
-[atomci]
-url = http://localhost:8081
-
-
-# jenkins default jnlp/ kaniko image defined.
-[defaultImages]
-jnlpImageAddr = 10.10.2.60:5000/library/jenkins:jnlp-debug
-kanikoImageAddr = 10.10.2.60:5000/library/kaniko-executor:latest
-
-[log]
-logfile = "log/atomci.log"
-level = 7
-separate = ["error"]
-
-
-[k8s]
-configPath = ./conf/k8sconfig
-
-# ldap settings
-[ldap]
-host = ldap.xxx.com
-port = 389
-bindDN = ldap@xx.com
-bindPassword = Xxx..,
-userFilter = (samaccountname=%s)
-baseDN = OU=Xxx,DC=xx,DC=com
-```
