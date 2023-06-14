@@ -18,6 +18,10 @@
 
 #### jenkins 配置集成
 
+> 如何生成Jenkins API Token 参考下图
+
+![新建服务集成配置](../assets/guide/jenkins/service-integrate03-01.png)
+
 ![新建服务集成配置](../assets/guide/service-inter03.png)
 
 #### Registry 配置集成
@@ -28,7 +32,7 @@
 
 - 支持`kubernetes`、`jenkins`、`Registry` 这三种类型的配置集成；
 - 必须配置至少一个`jenkins`、`Registry`, `kubernetes`类型可以根据需要添加；
-- 另外 Jenkins 的 kubernetes 的授权配置请查看 [github](https://github.com/warm-native/docs/tree/master/topic002/deploy)
+- 另外 Jenkins 的 kubernetes 的授权配置请查看 [github](https://github.com/warm-native/docs/tree/master/jenkins/topic002/deploy)
 - Registry 支持自建 Harbor、阿里云容器服务、腾讯云容器服务等，注意如果容器服务没有配置 https 域名的，请将“是否 HTTPS”设置为关闭状态
   :::
 
