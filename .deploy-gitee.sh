@@ -19,6 +19,6 @@ git config user.email 'colynn.liu@gmail.com'
 git commit -m 'deploy'
 
 # git push -f "https://${access_token}@github.com/go-atomci/atomci-press.git" master:gh-pages
-git push -f "git@github.com:go-atomci/atomci-press.git" master:gh-pages
+git push -f "https://gitee.com/goatom/atomci-press.git" master:gh-pages
 
 cd -

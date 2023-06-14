@@ -1,28 +1,22 @@
 # atomci-press
 
-AtomCI 致力于让中小企业快速落地Kubernetes
+AtomCI Docs
 
-## 源起
 
-## 视频演示
+## AtomCI视频演示
 1. 概述及如何安装部署 [视频链接](https://www.bilibili.com/video/BV1qq4y1N7mZ/)
+2. 介绍及快速开始 [视频链接](https://www.bilibili.com/video/BV1K3411m78Q/)
+3. 5分钟全流程体验 [视频链接](https://www.bilibili.com/video/BV18F411a7Rk/)
 
-## 功能介绍
-[>请移步](https://go-atomci.github.io/atomci-press/guide/00features.html)
 
-## Development
+### How to run locally
 
-```bash
-# clone the project
-git clone git@github.com:go-atomci/atomci-press.git
-
-# install dependency
-yarn install
-
-# develop
-yarn run dev
+```sh
+$ yarn install
+$ yarn run dev
 ```
 
-open http://localhost:8080
+### AtomCI 用户交流群
 
-> Generator by [vuepress](https://github.com/vuejs/vuepress)
+添加微信( __colynnliu__ ),邀请入群
+

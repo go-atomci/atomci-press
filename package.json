@@ -19,7 +19,7 @@
     "semi": false,
     "singleQuote": true
   },
-  "author": "wenjianzhang",
+  "author": "colynn.liu",
   "license": "ISC",
   "devDependencies": {
     "prettier": "1.14.2",

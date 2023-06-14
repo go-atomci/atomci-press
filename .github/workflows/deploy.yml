@@ -1,0 +1,33 @@
+name: Publish Site
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+        with:
+          submodules: true
+      - name: Build page
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: |
+          yarn install
+          yarn run build
+      - name: Pages Commit & Publish
+        run: |
+          cd docs/.vuepress/dist
+          touch .nojekyll
+          git init
+          git add -A
+          git config --global user.email "colynn.liu@gmail.com"
+          git config --global user.name "gitlab-ci-boot"
+          git commit -m "publish site"
+          git push -f https://colynn:${{secrets.GITHUB_TOKEN}}@github.com/go-atomci/atomci-press.git  master:gh-pages

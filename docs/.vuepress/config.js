@@ -35,7 +35,7 @@ module.exports = {
     // ]
   ],
   themeConfig: {
-    repo: 'go-atomci/atomci-press',
+    repo: 'go-atomci/atomci',
     docsRepo: 'go-atomci/atomci-press',
     lastUpdated: '上次更新',
     docsDir: 'docs',
@@ -114,7 +114,7 @@ module.exports = {
 }
 
 function genEssentialsSidebar(type = '') {
-  const mapArr = ['/guide/', '/guide/01quickstart.md', '/guide/00features.md']
+  const mapArr = ['/guide/', '/guide/01quickstart.md', '/guide/00features.md', '/guide/02.jenkins-requirements.md']
   return mapArr.map(i => {
     return type + i
   })
